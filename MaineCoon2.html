@@ -2,19 +2,89 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>maineCoons</title>
+<title>html3</title>
 	<style>
-		#myHeader {
-  		background-color: lightblue;
-  		color: black;
-  		padding: 40px;
-  		text-align: center;
-		}
-	</style>
+	.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+		.header {
+  padding: 8px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+		.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  background-color: dodgerblue;
+  padding: 10px;
+  flex: 50%;
+}
+		@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+		
+	</style>	
 </head>
 <body>
-	<h1 id="myHeader">Maine Coons</h1>
-	<img src="images/mainecoon.jpg" alt="black cat standing">
+	<div class = "header">
+	<h1>Cats</h1>
+	</div>
 	
+	<div class="topnav">
+  <a href="MaineCoon2.html">Maine Coon</a>
+  <a href="#">Tabby</a>
+  <a href="#">Ragdoll</a>
+		
+		
+</div>
+	<div class="flex-container">
+  <div class="flex-item-left">
+	  <h2>Maine Coon</h2>
+	  <img src="images/mainecoon.jpg" alt="black cat standing">
+		</div>
+  <div class="flex-item-right">Tabby</div>
+</div>
+
+	
+		
 </body>
 </html>
