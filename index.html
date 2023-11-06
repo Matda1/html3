@@ -4,77 +4,98 @@
 <meta charset="utf-8">
 <title>html3</title>
 	<style>
-		.class{
-			text-align: center;
-			list-style: none
-		}
-		a:vistited{
-			color:red;
-			background-color: transparent;
-			text-decoration:overline
-		}
-		
-		a:hover {
-  			color:black;
-  			background-color: transparent;
-  			text-decoration: underline;
-		}
-		.center{
-			margin-left: auto;
-			margin-right: auto;
-		}
+	.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+		.header {
+  padding: 8px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+		.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+}
+		@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
 		
 	</style>
-	
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#dialog" ).dialog();
+  } );
+  </script>
 </head>
-
 <body>
-	<header>
-		<h1 style="text-align: center">Cats Are Us</h1>
-	</header>
+	<div id="dialog" title="Basic dialog" align="justify">
+  <p>The Maine  Coon is large in comparison to the ragdoll, resized and closed with the &apos;x&apos; icon.</p>
+</div>
+<div class = "header">
+	<h1>Cats</h1>
+	</div>
 	
-	<table class="center" style="border: dashed">
-		<tr>
-	 	<th>Types of cats</th>
-	 	<th>Origin</th>
-	 	<th>Lifespan</th>
- 	</tr>		
-	<tr>
-		<td>ragdoll&nbsp;</td>
-		<td>Riverside, Cali</td>
-		<td>15 years</td>
-	</tr>
-	
-	<tr>
-		<td><a href="https://a-z-animals.com/blog/tabby-cat-lifespan-how-long-do-tabby-cats-live/">Tabby</a></td>
-		<td> N/A - from wildcat </td>
-		<td> 10 years</td>
+	<div class="topnav">
+  <a href="MaineCoon2.html">Maine Coon</a>
+  <a href="#">Tabby</a>
+  <a href="#">Ragdoll</a>		
 		
-	</tr>	
-	<tr>
-		<td><a href="MaineCoon2.html">Maine Coone</a></td>
-		<td>Maine, U.S</td>
-		<td>15 years</td>
-	</tr>
-	</table>
-	
-    <ul class="class">
-      <li><a href="#cat">Group of cats</a></li>
-      <li><a href="#maine">Maine Coon</a></li>
-      <li><a href="#ragdoll">Ragdoll</a></li>
-    </ul>
-	
-	<h2 id="cat">Group</h2>
-	<p>This is a group of cats</p>
-	<img src="images/groupCatss.jpg" alt="group of cats">
-	
-	<h3 id="maine">Maine Coon</h3>
-	<img src="images/mainecoon.jpg" alt="cat standing">
-	
-	<h4 id="ragdoll">Ragdoll</h4>
-	<img src="images/Ragdoll_from_Gatil_Ragbelas.jpg" alt="cat looking distance">
-	
-	
-	
+</div>
+	<div class="flex-container">
+  <div class="flex-item-left">
+	  <h2>Maine Coon</h2>
+	  <img src="images/mainecoon.jpg" alt="black cat standing">
+		</div>
+  <div class="flex-item-right">
+		<h2>Group of Cats</h2>
+		<img src="images/Ragdoll_from_Gatil_Ragbelas.jpg" alt="white cat with blue eyes" width="300">
+		</div>
+</div>
 </body>
 </html>
